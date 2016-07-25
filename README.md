@@ -1,9 +1,10 @@
 # BaasBox
 
-BaasBox backend for the IoTCity service.
+BaasBox backend for the IoTCity service. The version used in this project was 0.9.5.
 
 <!-- MDTOC maxdepth:6 firsth1:2 numbering:0 flatten:0 bullets:0 updateOnSave:1 -->
 
+[Installation](#installation)   
 [Service setup](#service-setup)   
 &emsp;[Collections](#collections)   
 &emsp;[Users](#users)   
@@ -13,6 +14,12 @@ BaasBox backend for the IoTCity service.
 [Docker](#docker)   
 
 <!-- /MDTOC -->
+
+## Installation
+
+- Download your BaasBox zip file from the official site.
+- Unzip
+- Run the `start.sh` script
 
 ## Service setup
 
