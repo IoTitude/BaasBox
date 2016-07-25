@@ -23,7 +23,7 @@ The data was stored on BaasBox and it's noSQL OrientDB. The data is split into c
 | Collection | Description | Permissions |
 | :--- | :--- | :--- |
 | Master | Holds all KaMU information of a city | KAAadmin: RW, Office Installer: RW |
-| Admin | Holds a list of KAAadmin hashes | KaMU: R |
+| Admin | Holds a list of AdminKaMU hashes | KaMU: R |
 | TaskList | Field Installer specific task list | Office Installer: RW, Field Installer: R |
 | Profile | A collection of available profiles | Office Installer: RW |
 | Version | A collection of available versions | Office Installer: RW |
@@ -35,7 +35,7 @@ These collections were implemented discluding the TaskList.
 | User | Description | Permissions |
 | :--- | :--- | :--- |
 | KaMU | Common user for metering units | AdminHash: read |
-| KAAadmin |  | Master: read/write |
+| AdminKaMU | Admin software for controlling KaMUs | Master: read/write |
 | Office Installer |  | Master: read/write, TaskList(s), read/write (create) |
 | Field Installer |  | TaskList: read |
 
