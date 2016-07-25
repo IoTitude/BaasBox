@@ -1,0 +1,15 @@
+# Compose for starting the BaasBox service on Rancher.
+
+baasbox-data:
+  image: iotitude/baasbox-data
+  labels:
+    io.rancher.container.start_once: 'true'
+baasbox:
+  image: iotitude/baasbox
+  restart: always
+  volumes_from:
+    - baasbox-data
+  labels:
+    io.rancher.sidekicks: baasbox-data
+  ports:
+    - "9000:9000"
