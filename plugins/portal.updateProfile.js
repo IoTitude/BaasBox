@@ -19,9 +19,11 @@ http().put(function (req) {
 
     var profileId = Box.Documents.find("Profile", { fields: "profileId", where: "name = '" + profile + "'"})[0].profileId
     Box.log(profileId)
+    // Current setup of java rest api only takes in form data. Can't parse into json.
     var data_to_send = "&datetime=" + datetime + "&profileId=" + profileId + "&hash=" + hash + "&"
     Box.log(data_to_send)
 
+    // Post the command to AdminKaMU
     var result_REST = Box.WS.post(
       lib.JAVA_REST_URL + "/changeProfile",
       data_to_send,
@@ -34,13 +36,12 @@ http().put(function (req) {
     )
     Box.log(result_REST)
 
-    // Update the information in the database
+    // Update the information in the database only on success
     if (result_REST.status === 200) {
       var result = lib.update(kamu)
     } else {
       return { status: result_REST.status, content: result_REST }
     }
-
 
   } catch (error) {
     Box.log(error)

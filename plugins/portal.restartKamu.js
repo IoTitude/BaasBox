@@ -16,9 +16,11 @@ http().put(function (req) {
     var kamu = body.kamu
     var hash = kamu.hash
 
+    // Current setup of java rest api only takes in form data. Can't parse into json.
     var data_to_send = "&datetime=" + datetime + "&hash=" + hash + "&"
     Box.log(data_to_send)
 
+    // Post the command to AdminKaMU
     var result_REST = Box.WS.post(
       lib.JAVA_REST_URL + "/restartDevice",
       data_to_send,

@@ -7,4 +7,4 @@ These plugins extended the functionality of the basic BaasBox installation. The 
 - `portal.updateProfile` allowed to set a different profile for a KaMU.
 - `portal.updateSoftware` made it possible to change the version of the software used by a KaMU.
 
-Even though the official way of adding plugins to BaasBox is through the web console it is possible to send plugins in through the REST API. A rudimentary script is provided in this folder. It could be used as a starting point for making a script that could initialize the database with plugins and data. See [this script](https://github.com/IoTitude/docker_test_env/blob/master/baasbox_test/scripts/data.sh) for an example.
+Even though the official way of adding plugins to BaasBox was through the web console it was possible to send plugins in through the REST API. A rudimentary script is provided in this folder. It could be used as a starting point for making a script that could initialize the database with plugins and data. See [this script](https://github.com/IoTitude/docker_test_env/blob/master/baasbox_test/scripts/data.sh) for an example.

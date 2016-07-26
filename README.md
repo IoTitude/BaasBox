@@ -23,7 +23,7 @@ BaasBox backend for the IoTCity service. The version used in this project was 0.
 
 ## Service setup
 
-The data was stored on BaasBox and it's noSQL OrientDB. The data is split into collections and documents. The storage format was JSON.
+The data was stored on BaasBox and it's noSQL OrientDB. The data was split into collections and documents. The storage format was JSON.
 
 ### Collections
 

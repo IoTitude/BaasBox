@@ -4,7 +4,7 @@
  * Provides shared functions for other plugins.
  */
 
-// Url to the java rest api
+// Url to the AdminKaMU java rest api
 var JAVA_REST_URL = "http://192.168.142.30:8080/adminkamu/webresources/controller"
 
 // Update the KaMU's data in the database
@@ -52,5 +52,6 @@ var update = function (kamu) {
   return doc
 }
 
+// export to make these available on import
 exports.JAVA_REST_URL = JAVA_REST_URL
 exports.update = update
