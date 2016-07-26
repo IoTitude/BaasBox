@@ -1,11 +1,13 @@
 # BaasBox
 
-BaasBox backend for the IoTCity service. The version used in this project was 0.9.5.
+[BaasBox](http://www.baasbox.com) back-end for the IoTCity service. The version used in this project was 0.9.5.
+
+The back-end provided a common back-end for many of the key services of the project. Instapp, Portal, AdminKaMU, KaMU and SDNcontroller all used the same back-end. Main purpose of the BaasBox back-end was to have a single place for KaMU information and user data.
 
 <!-- MDTOC maxdepth:6 firsth1:2 numbering:0 flatten:0 bullets:0 updateOnSave:1 -->
 
 [Installation](#installation)   
-[Service setup](#service-setup)   
+[How it was setup](#how-it-was-setup)   
 &emsp;[Collections](#collections)   
 &emsp;[Users](#users)   
 &emsp;[Roles](#roles)   
@@ -21,7 +23,7 @@ BaasBox backend for the IoTCity service. The version used in this project was 0.
 - Unzip
 - Run the `start.sh` script
 
-## Service setup
+## How it was setup
 
 The data was stored on BaasBox and it's noSQL OrientDB. The data was split into collections and documents. The storage format was JSON.
 
@@ -86,7 +88,7 @@ Plugins were used to further expand the capabilities of BaasBox and to provide s
 
 ## Docker
 
-These docker files provided a basis for dockerized versions of the application components. They were added to the Docker Hub with automatic building:
+The dockerfiles in the repo provided a dockerized version of the BaasBox service. Main image was for running the service while a separate data container made it possible to persist the data if the main service was shutdown. They were added to the Docker Hub with automatic building:
 
 - [iotitude/baasbox](https://hub.docker.com/r/iotitude/baasbox/)
 - [iotitude/baasbox-data](https://hub.docker.com/r/iotitude/baasbox-data/)
